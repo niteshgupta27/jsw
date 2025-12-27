@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="376" height="161" viewBox="0 0 376 161">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.322" y1="1.274" x2="-0.249" y2="-0.464" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#044482"/>
+      <stop offset="0.502" stop-color="#0775a5" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#ffff01"/>
+    </linearGradient>
+  </defs>
+  <path id="nebula_backgroun" d="M0,0H375V150a10,10,0,0,1-10,10H10A10,10,0,0,1,0,150Z" transform="translate(0.5 0.5)" stroke="rgba(0,0,0,0)" stroke-width="1" fill="url(#linear-gradient)"/>
+</svg>
