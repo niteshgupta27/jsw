@@ -88,21 +88,21 @@ class LiveView extends GetView<AttendeeController> {
                                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
                               ),
                               Text(
-                                "0",
+                                order.attendee_contractors.toString(),
                                 style: TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w600,
-                                  color: AppColors.fountGray,
+                                  color: order.attendee_contractors==0?Colors.red: AppColors.fountGray,
                                 ),
                               ),
 
                             ],
                           ), Row( children: [
                             InkWell(child:const Icon(Icons.chat_rounded, size: 27, color: Colors.grey) ,onTap: (){
-                              controller.ContactorLink();
+                              controller.ContactorLink(order.fldAid.toString());
                             },),
                             const SizedBox(width: 12),
-                             InkWell(child:Icon(Icons.remove_red_eye, size: 27, color: Colors.grey),onTap: () async {
+                            order.attendee_contractors==0?SizedBox(width: 27,): InkWell(child:Icon(Icons.remove_red_eye, size: 27, color: Colors.grey),onTap: () async {
                                final result = await Get.toNamed(Routes.contactorSCREEN, arguments: { "Attendees": order});
                                if (result != null) {
                                 controller.CallGetdata();

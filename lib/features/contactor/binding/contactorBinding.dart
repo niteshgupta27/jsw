@@ -3,6 +3,7 @@ import 'package:jsw/features/contactor/controller/contactorController.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/bindings_interface.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
+import 'package:jsw/features/contactor/service/contractorservice.dart';
 
 class ContactorBinding extends Bindings {
   @override
@@ -11,6 +12,8 @@ class ContactorBinding extends Bindings {
     Get.lazyPut<ContactorController>(
           () => ContactorController(),
     );
-
+    Get.lazyPut<ContractorService>(
+          () => ContractorService(),
+    );
   }
 }

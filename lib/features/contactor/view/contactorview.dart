@@ -44,7 +44,7 @@ class ContactorView extends GetView<ContactorController>  {
                       bottom: Dimensions.paddingSizeMoreExtraLarge
                   ),
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount:2,//controller.live.length,
+                  itemCount:controller.live.length,
                   itemBuilder: (context, index) {
                     ContactorModel order = controller.live[index];
                     return Container(

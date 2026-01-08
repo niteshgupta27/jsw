@@ -30,14 +30,14 @@ class ContactorModelResponse {
   }
 }
 class ContactorModel {
-  final int fldSid;
+  // final int fldSid;
   final String fldRole;
-  final int fldmobile;
+  final String fldmobile;
   //final DateTime fldCreatedAt;
   //final DateTime fldUpdatedAt;
 
   ContactorModel({
-    required this.fldSid,
+    // required this.fldSid,
     required this.fldRole,
      required this.fldmobile,
     // required this.fldCreatedAt,
@@ -46,9 +46,9 @@ class ContactorModel {
 
   factory ContactorModel.fromJson(Map<String, dynamic> json) {
     return ContactorModel(
-      fldSid: int.tryParse(json['fld_sid'].toString())??0,
-      fldRole: json['fld_role']??"",
-        fldmobile:json['fldmobile']??"",
+     // fldSid: int.tryParse(json['fld_sid'].toString())??0,
+      fldRole: json['fld_contractor_name']??"",
+        fldmobile:json['fld_contractor_phone']??"",
       // fldStatus: json['fld_status']??1,
       // fldCreatedAt: DateTime.parse(json['fld_created_at']),
       //fldUpdatedAt: DateTime.parse(json['fld_updated_at']),
@@ -57,8 +57,8 @@ class ContactorModel {
 
   Map<String, dynamic> toJson() {
     return {
-      'fld_sid': fldSid,
-      'fld_role': fldRole,
+     // 'fld_sid': fldSid,
+      'fld_contractor_phone': fldRole,
       //'fld_status': fldStatus,
       // 'fld_created_at': fldCreatedAt.toIso8601String(),
       //'fld_updated_at': fldUpdatedAt.toIso8601String(),

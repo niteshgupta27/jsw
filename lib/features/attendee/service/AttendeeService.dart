@@ -90,4 +90,19 @@ class AttendeeService {
       rethrow;
     }
   }
+  Future<GenralResponceModel> getmessages(attendee_id,user_id) async {
+    try {
+      final response = await BaseClient.sharedClient.getRequest(
+        endPoint: "${AppConstants.send_message_to_attendee_call}$attendee_id&user_id=$user_id",
+
+      );
+      // print("response=====$response");
+      print("response=====$response");
+      return GenralResponceModel.fromJson(response as Map<String, dynamic>);
+    } catch (exception) {
+      print("response=====$exception");
+      rethrow;
+    }
+  }
+
 }

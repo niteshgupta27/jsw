@@ -145,14 +145,35 @@ print("panddingList${panddingList.value.length}");
         curve: Curves.easeInOut
     );
   }
-  void ContactorLink() {
+  void ContactorLink(String id) {
     DialogHelper.showDialog(
       title: " Send link to add contractors? ",
       content: "This action cannot be undone.",
       onConfirm: () {
         //Delete_image(meeting_image_id);
+        attendeemessage(id);
       },
     );
 
+  }
+  void attendeemessage(String id) {
+    // AppUtils.alertWithProgressBar();
+    isLoading.value= true;
+    productServices.getmessages( id,appStorage.loggedInUser.id).then((value) async {
+      isLoading.value = false;
+      if (value.success == true) {
+        // data.value=value;
+        HomeApi();
+      } else {
+        // Get.back();
+
+        AppUtils.showSnackbar(value.message.toString(),  "Info");
+      }
+    }).catchError((err) {
+      // Get.back();
+      isLoading.value = false;
+      AppUtils.showSnackbar("Something went wrong","Oops");
+      //AppUtils.alert("Something went wrong", title: "Oops");
+    });
   }
 }

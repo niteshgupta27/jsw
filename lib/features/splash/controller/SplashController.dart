@@ -22,7 +22,7 @@ class SplashController extends GetxController {
       if(appStorage.loggedInUserToken != ""){
         Get.offNamed(Routes.ProductsDashboard);
       }else{
-       // Get.offNamed(Routes.LOGINSCREEN);
+        Get.offNamed(Routes.LOGINSCREEN);
       }
 
     });

@@ -51,7 +51,7 @@ class Table_Attendee {
   // final String fldUpdatedAt;
   final int fldInvites;
   final int tollfree;
-
+final int attendee_contractors;
   Table_Attendee({
     required this.fldAid,
     required this.fldCustomerId,
@@ -103,6 +103,7 @@ class Table_Attendee {
     // required this.fldUpdatedAt,
     required this.fldInvites,
     required this.tollfree,
+    required this.attendee_contractors,
   });
 
   factory Table_Attendee.fromJson(Map<String, dynamic> json) {
@@ -153,6 +154,7 @@ class Table_Attendee {
       fldRemark3: safeExtract('fld_remark_3', ''),
       fldInvites: safeExtract('fld_invites', 0) is int ? safeExtract('fld_invites', 0) : int.tryParse(safeExtract('fld_invites', '0').toString()) ?? 0,
       tollfree: safeExtract('tollfree', 0) is int ? safeExtract('tollfree', 0) : int.tryParse(safeExtract('tollfree', '0').toString()) ?? 0,
+        attendee_contractors:safeExtract('attendee_contractors', 0) is int ? safeExtract('attendee_contractors', 0) : int.tryParse(safeExtract('attendee_contractors', '0').toString()) ?? 0,
     );
     // return Table_Attendee(
     //   fldAid: json['fld_aid'] ??0,

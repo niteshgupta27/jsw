@@ -25,6 +25,9 @@ class AppConstants {
   static var GET_adhesives = "adhesives";
   static var MEETING_INVITES_LIST='meeting/invites-list';
   static var add_meeting_call='add-meeting-call';
+  static var send_message_to_attendee_call='send-message-to-attendee?fld_attendee_id=';
+  static var attendee_contractors_call="attendee-contractors?fld_attendee_id=";
+
   static var getstaff='get-staff-list';
   static var attendance="meeting/attendance";
   static var AttendeeRefresh = "misscalls/check?d=";

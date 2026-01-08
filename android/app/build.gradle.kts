@@ -27,7 +27,8 @@ android {
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        versionName = "1.0.1"//flutter.versionName
+        setProperty("archivesBaseName", "Dulex JSW-$versionName")
     }
 
     buildTypes {
